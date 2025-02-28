@@ -1444,6 +1444,14 @@ video {
     padding-top: 8rem;
   }
 
+  .md\:pb-48 {
+    padding-bottom: 12rem;
+  }
+
+  .md\:pb-60 {
+    padding-bottom: 15rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }
