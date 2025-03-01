@@ -3,20 +3,432 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Coming Soon, Fla 'O Krezz</title>
-        <!-- <link href="img/logo.png" rel="shortcut icon"> -->
-        <link rel="shortcut icon" href="img/logo_nobg.png" type="image/x-icon" />
+        <title>Fla 'O Krezz!</title>
+        <link rel="shortcut icon" href="/img/logo_nobg.png" type="image/x-icon" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="src/output.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+            
+            @keyframes float {
+                0% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+                100% { transform: translateY(0px); }
+            }
+            
+            .float-animation {
+                animation: float 3s ease-in-out infinite;
+            }
+            
+            .bg-gradient-custom {
+                background-image: linear-gradient(to bottom, #A7BFD5, #ffffff);
+            }
+            
+            .font-poppins {
+                font-family: 'Poppins', sans-serif;
+            }
+            
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+            
+            .card-shadow {
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            }
+        </style>
     </head>
-    <body class="bg-[#8fabc3] min-h-screen flex justify-center items-center">
-        <div class="hover:cursor-wait focus:-rotate-12 hover:-rotate-12 transition duration-75 ease-linear">
-            <img src="img/logo.png" alt="" class="w-96 mx-auto" />
-            <!-- mx-auto untuk posisi horizontal tengah -->
-            <div class="text-center mt-4">
-                <!-- text-center untuk teks di tengah -->
-                <h1 class="text-4xl font-DynaPuff">Coming Soon</h1>
+    <body class="bg-gradient-custom min-h-screen font-poppins">
+        <!-- <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 py-3 px-5 shadow-md">
+            <div class="container mx-auto flex justify-between items-center">
+                <img src="/img/logo_nobg.png" alt="Logo" class="h-12">
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hero" class="font-medium text-gray-700 hover:text-blue-500 transition-colors">Home</a>
+                    <a href="#about" class="font-medium text-gray-700 hover:text-blue-500 transition-colors">About</a>
+                    <a href="#products" class="font-medium text-gray-700 hover:text-blue-500 transition-colors">Products</a>
+                    <a href="#contact" class="font-medium text-gray-700 hover:text-blue-500 transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
-        </div>
+        </nav> -->
+
+        <section id="hero" class=" pt-10 pb-20 md:pt-40 md:pb-60" data-aos="fade-in">
+            <div class="container mx-auto px-4">
+                <div class="bg-white/30 rounded-2xl p-8 md:p-12 card-shadow backdrop-blur-sm max-w-6xl mx-auto">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <!-- Logo di kiri -->
+                        <div class="w-full md:w-1/2 flex justify-center md:justify-start mb-8 md:mb-0">
+                            <img src="/img/logo_nobg.png" alt="Fla 'O Krezz Logo" class="w-3/4 md:w-full object-contain float-animation" />
+                        </div>
+                        <!-- Konten: Teks dan foto produk di sebelah kanan -->
+                        <div class="w-full md:w-1/2 text-center md:text-left">
+                            <h1 class="font-bold text-4xl md:text-5xl lg:text-6xl text-blue-800 mb-4 text-shadow">Hi, It's <span class="text-pink-600">Fla 'O Krezz!</span></h1>
+                            <p class="text-xl md:text-2xl text-gray-700 mb-6">Discover our delicious treats that will melt in your mouth!</p>
+                            <a href="#products" class="bg-pink-500 hover:bg-pink-600 text-white py-3 px-8 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center">
+                                Explore Now
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            
+                            <!-- Foto produk dengan efek hover yang lebih menarik -->
+                            <div id="product_photo" class="flex justify-center space-x-5 mt-12">
+                                <div class="group relative">
+                                    <img src="/img/choco_nobg.png" alt="Choco" class="w-32 md:w-40 group-hover:scale-110 transition-all duration-300 ease-out" />
+                                    <div class="absolute -bottom-2 left-0 right-0 bg-blue-600 text-white text-center py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">Chocolate</div>
+                                </div>
+                                <div class="group relative">
+                                    <img src="/img/vanilla_nobg.png" alt="Vanilla" class="w-32 md:w-40 group-hover:scale-110 transition-all duration-300 ease-out" />
+                                    <div class="absolute -bottom-2 left-0 right-0 bg-yellow-500 text-white text-center py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">Vanilla</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-white/20 backdrop-blur-sm" data-aos="fade-in">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">About Our Delicious Treats</h2>
+                    <div class="w-24 h-1 bg-pink-500 mx-auto"></div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center max-w-5xl mx-auto">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="bg-white/70 rounded-2xl p-6 card-shadow mx-4">
+                            <p class="text-gray-700 text-lg mb-4">Fla 'O Krezz offers you the perfect combination of creamy flavors and crunchy texture that will delight your taste buds!</p>
+                            <p class="text-gray-700 text-lg mb-4">Made with premium ingredients, our treats are perfect for any occasion - whether it's a family gathering, party, or just a sweet moment for yourself.</p>
+                            <p class="text-gray-700 text-lg">We take pride in creating delicious treats that bring joy to our customers while maintaining the highest quality standards.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
+                        <div class="bg-blue-100/70 p-4 rounded-xl text-center card-shadow">
+                            <i class="fas fa-certificate text-blue-600 text-3xl mb-3"></i>
+                            <h3 class="font-semibold text-xl mb-2">Premium Quality</h3>
+                            <p class="text-gray-600">Only the finest ingredients</p>
+                        </div>
+                        <div class="bg-pink-100/70 p-4 rounded-xl text-center card-shadow">
+                            <i class="fas fa-heart text-pink-600 text-3xl mb-3"></i>
+                            <h3 class="font-semibold text-xl mb-2">Made with Love</h3>
+                            <p class="text-gray-600">Carefully crafted treats</p>
+                        </div>
+                        <div class="bg-yellow-100/70 p-4 rounded-xl text-center card-shadow">
+                            <i class="fas fa-thumbs-up text-yellow-600 text-3xl mb-3"></i>
+                            <h3 class="font-semibold text-xl mb-2">Customer Favorite</h3>
+                            <p class="text-gray-600">Loved by everyone</p>
+                        </div>
+                        <div class="bg-green-100/70 p-4 rounded-xl text-center card-shadow">
+                            <i class="fas fa-leaf text-green-600 text-3xl mb-3"></i>
+                            <h3 class="font-semibold text-xl mb-2">Natural Flavors</h3>
+                            <p class="text-gray-600">No artificial additives</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="py-20" data-aos="fade-in">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Our Products</h2>
+                    <div class="w-24 h-1 bg-pink-500 mx-auto"></div>
+                    <p class="text-gray-700 text-lg mt-4 max-w-2xl mx-auto">Discover our range of delicious flavors that will satisfy your cravings</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-white/60 rounded-2xl overflow-hidden card-shadow group hover:bg-white/90 transition-all">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="/img/choco_nobg.png" alt="Chocolate Flavor" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-pink-500 text-white rounded-full py-1 px-3 text-sm font-semibold">
+                                Best Seller
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-blue-800 mb-2">Chocolate Delight</h3>
+                            <p class="text-gray-600 mb-4">Rich chocolate flavor with a perfect balance of sweetness and creaminess.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-pink-600 font-bold text-xl">$3.99</span>
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
+                                    Order Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/60 rounded-2xl overflow-hidden card-shadow group hover:bg-white/90 transition-all">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="/img/vanilla_nobg.png" alt="Vanilla Flavor" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-blue-500 text-white rounded-full py-1 px-3 text-sm font-semibold">
+                                Popular
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-blue-800 mb-2">Vanilla Dream</h3>
+                            <p class="text-gray-600 mb-4">Smooth vanilla flavor that melts in your mouth with each bite.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-pink-600 font-bold text-xl">$3.99</span>
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
+                                    Order Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="bg-white/60 rounded-2xl overflow-hidden card-shadow group hover:bg-white/90 transition-all">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="/api/placeholder/300/300" alt="Strawberry Flavor" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-green-500 text-white rounded-full py-1 px-3 text-sm font-semibold">
+                                New
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-blue-800 mb-2">Strawberry Bliss</h3>
+                            <p class="text-gray-600 mb-4">Fresh strawberry flavor that brings a fruity twist to our classic recipe.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-pink-600 font-bold text-xl">$4.29</span>
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
+                                    Order Now
+                                </button>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                
+                <div class="text-center mt-12">
+                    <button class="bg-pink-500 hover:bg-pink-600 text-white py-3 px-8 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center">
+                        View All Products
+                        <i class="fas fa-chevron-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-20 bg-blue-50/50" data-aos="fade-in">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">What Our Customers Say</h2>
+                    <div class="w-24 h-1 bg-pink-500 mx-auto"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-white rounded-2xl p-6 card-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600">5.0</span>
+                        </div>
+                        <p class="text-gray-700 italic mb-4">"The chocolate flavor is absolutely divine! My family can't get enough of these treats. We order them for every special occasion!"</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center text-blue-800 font-bold text-xl">
+                                S
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="font-semibold">Sarah Johnson</h4>
+                                <p class="text-gray-500 text-sm">Loyal Customer</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 card-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600">5.0</span>
+                        </div>
+                        <p class="text-gray-700 italic mb-4">"Vanilla Dream is my favorite! The texture is perfect - creamy with just the right amount of crunchiness. I'm addicted!"</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-green-200 rounded-full flex items-center justify-center text-green-800 font-bold text-xl">
+                                M
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="font-semibold">Michael Chen</h4>
+                                <p class="text-gray-500 text-sm">Dessert Enthusiast</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 card-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 flex">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600">4.5</span>
+                        </div>
+                        <p class="text-gray-700 italic mb-4">"These treats are perfect for parties! Everyone always asks where I got them. The quality and taste are consistently excellent."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center text-pink-800 font-bold text-xl">
+                                A
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="font-semibold">Aisha Patel</h4>
+                                <p class="text-gray-500 text-sm">Party Planner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20" data-aos="fade-in">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto bg-white/70 rounded-2xl overflow-hidden card-shadow">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/2 bg-blue-600 p-8 md:p-12 text-white">
+                            <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+                            <p class="mb-8">We'd love to hear from you! Contact us for orders, questions, or feedback.</p>
+                            
+                            <div class="flex items-center mb-6">
+                                <i class="fas fa-map-marker-alt text-2xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Visit Us</h4>
+                                    <p>123 Sweet Street, Dessert City</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center mb-6">
+                                <i class="fas fa-phone text-2xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Call Us</h4>
+                                    <p>+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-2xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Email Us</h4>
+                                    <p>info@flaokrezz.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition-colors">
+                                        <i class="fab fa-facebook-f text-white"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition-colors">
+                                        <i class="fab fa-instagram text-white"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition-colors">
+                                        <i class="fab fa-twitter text-white"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition-colors">
+                                        <i class="fab fa-tiktok text-white"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="w-full md:w-1/2 p-8 md:p-12">
+                            <h3 class="text-2xl font-bold text-blue-800 mb-6">Send Us a Message</h3>
+                            
+                            <form>
+                                <div class="mb-4">
+                                    <label for="name" class="block text-gray-700 mb-2">Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Name">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Email">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                                    <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Subject">
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                    <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Message"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-pink-500 hover:bg-pink-600 text-white py-3 rounded-lg font-semibold transition-colors">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-blue-800 text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <div class="mb-8 md:mb-0">
+                        <img src="/img/logo_nobg.png" alt="Logo" class="h-16 mb-4">
+                        <p class="max-w-xs text-blue-100">Bringing joy through delicious treats since 2025 with Quality ingredients and amazing taste.</p>
+                    </div>
+                    
+                    <!-- <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                        <div>
+                            <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Home</a></li>
+                                <li><a href="#about" class="text-blue-200 hover:text-white transition-colors">About Us</a></li>
+                                <li><a href="#products" class="text-blue-200 hover:text-white transition-colors">Products</a></li>
+                                <li><a href="#contact" class="text-blue-200 hover:text-white transition-colors">Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-lg mb-4">Products</h4>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Chocolate</a></li>
+                                <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Vanilla</a></li>
+                                <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Strawberry</a></li>
+                                <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Special Editions</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-lg mb-4">Legal</h4>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Privacy Policy</a></li>
+                                <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Terms of Service</a></li>
+                                <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Refund Policy</a></li>
+                                <li><a href="#" class="text-blue-200 hover:text-white transition-colors">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <div class="border-t border-blue-700 mt-12 pt-8 text-center text-blue-200">
+                    <p>&copy; 2025 Fla 'O Krezz. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#" class="fixed bottom-6 right-6 bg-pink-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-pink-600 transition-colors">
+            <i class="fas fa-arrow-up"></i>
+        </a>
     </body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true, // Animasi hanya sekali
+            offset: 120, // Offset trigger (px)
+            easing: 'ease-out-quad'
+        });
+    </script>
 </html>
