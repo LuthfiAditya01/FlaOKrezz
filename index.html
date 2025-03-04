@@ -7,7 +7,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="src/output.css" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <meta name="theme-color" content="#b0c4d4">
+        <meta name="theme-color" content="#b0c4d4" id="themeColorMeta">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
             
@@ -516,4 +516,24 @@
           });
         });
       </script>
+      <script>
+        // Fungsi untuk update theme-color berdasarkan dark/light mode
+        function updateThemeColor() {
+            const themeColorMeta = document.getElementById('themeColorMeta');
+            
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                // Dark mode aktif
+                themeColorMeta.setAttribute('content', '#1a1a1a'); // Warna dark mode
+            } else {
+                // Light mode aktif
+                themeColorMeta.setAttribute('content', '#ffffff'); // Warna light mode
+            }
+        }
+
+        // Jalankan fungsi saat halaman dimuat
+        updateThemeColor();
+
+        // Update saat pengguna mengubah mode (misal: dari light ke dark)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateThemeColor);
+    </script>
 </html>
