@@ -483,18 +483,33 @@
     // Smooth scroll untuk tombol Explore Now
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+            e.preventDefault();
+            
+            const href = this.getAttribute('href');
+            
+            // Skip if href is just "#"
+            if (href === '#') {
+                // Scroll to top of the page
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                return;
+            }
+            
+            const target = document.querySelector(href);
+            
+            if (target) {
+                // Hitung offset untuk kompensasi animasi AOS
+                const offset = 120; // Sesuaikan nilai ini sesuai kebutuhan
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
         
-        // Hitung offset untuk kompensasi animasi AOS
-        const offset = 120; // Sesuaikan nilai ini sesuai kebutuhan
-        const elementPosition = target.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - offset;
-    
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
     
